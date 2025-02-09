@@ -89,10 +89,6 @@ body {
 }
 .logo2 {
     color: #2E2F42;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 1.17;
-    letter-spacing: 0.03em;
 }
 .burger-btn {
     padding: 0;
@@ -106,5 +102,227 @@ body {
 @media screen and (min-width: 768px) {
 .burger-btn {
 display: none;
+    }
+    .nav-ul {
+        list-style-type: none;
+            display: flex;
+            gap: 40px;
+            align-items: center;
+    }
+    .nav-menu {
+    display: flex;
+    align-items: center;
+}
+.add-cont {
+    font-style: normal;
+    display: block;
+}
+.header-logo {
+    padding: 24px 0;
+    margin-right: 120px;
+}
+.list-menu {
+    display: block;
+    padding: 24px 0;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #2E2F42;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.list-menu:hover,
+.list-menu:focus,
+.list-menu.current {
+    color: #404BBF;
+}
+
+.current {
+    position: relative;
+}
+
+.current::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #404BBF;
+    bottom: -1px;
+    left: 0;
+}
+.add-ul {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+}
+.add-ul .add-menu {
+    font-size: 12px;
+        line-height: 1.17;
+        letter-spacing: 0.04em;
+        color: #434455;
+        display: block;
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+}
+.add-menu:hover,
+.add-menu:focus {
+    color: #404BBF;
+}
+@media screen and (min-width: 1158px) {
+    .header-logo {
+            margin-right: 76px;
+        }
+    .add-ul {
+            flex-direction: row;
+                gap: 40px;
+                align-items: center;
+        }
+    .add-ul .add-menu {
+        text-decoration: none;
+            font-size: 16px;
+            line-height: 1.5;
+            letter-spacing: 0.02em;
+            padding: 24px 0;
+    }
+    .add-cont {
+        padding: 0;
+    }
+}
+/* MObile menu */
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.mobile-menu.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.mobile-menu-container {
+    position: relative;
+    padding-top: 72px;
+    padding-bottom: 40px;
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.mobile-menu-close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #ffffff;
+    width: 24px;
+    height: 24px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 0;
+    cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu-close:hover,
+.modal-menu-close:focus {
+    background: #404bbf;
+    border: none;
+}
+
+.mobile-menu-div {
+    padding: 0 16px;
+}
+
+.mobile-menu-nav {
+    margin-bottom: auto;
+
+}
+
+.mobile-menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    list-style-type: none;
+}
+
+.mobile-menu-link {
+    color: #2E2F42;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+
+}
+
+.mobile-first-link {
+    color: #404BBF;
+}
+
+.mobile-contacts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 48px;
+}
+
+
+.mobile-socmedia-list {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+}
+
+.mobile-socmedia-icon {
+    fill: #f4f4fd;
+}
+
+.mobile-socmedia-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #4d5ae5;
+    border: none;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.mobile-socmedia-link:hover,
+.mobile-socmedia-link:focus {
+    background-color: #404BBF;
+}
+
+.mobile-socmedia-list .mobile-socmedia-item {
+    width: 40px;
+    height: 40px;
+}
+
+@media screen and (min-width: 768px) {
+    .mobile-menu {
+        display: none;
     }
 }
